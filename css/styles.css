@@ -1,0 +1,73 @@
+body {
+  font-family: "Space Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.navi {
+  background-color: #619e9e;
+}
+
+.navi_menu {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-size: 15px;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navi_link {
+  text-decoration: none;
+  color: white;
+}
+
+.navi_link:hover {
+  color: black;
+}
+
+.main-header {
+  padding: 100px 0;
+  text-align: center;
+  background-image: url("../assets/background.jpg");
+  background-size: contain;
+  color: white;
+}
+
+.section_style {
+    min-height: 60vh;
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+
+.section_content {
+    padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .nav_list {
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .section_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+}
