@@ -8,6 +8,9 @@ buildMenu = () => {
     navItem = document.createElement("li");
     section.classList = "section_style";
     navItem.innerHTML = `<a href="#${menuNames}" class="navi_link">${menuNames.toUpperCase()}</a>`;
+    section.scrollIntoView({
+      behavior: "smooth",
+    });
 
     navList.appendChild(navItem);
   }
