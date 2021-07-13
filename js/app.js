@@ -26,26 +26,26 @@ buildMenu();
 
 
 // Add class 'active' to section when near top of viewport
-const sectionActive = () => {
+const sectionActiveClass = () => {
   sections.forEach((section) => {
-    const elementViewport = section.getBoundingClientRect().top;
+    const viewportElement = section.getBoundingClientRect().top;
     section.classList.remove("section_style_active");
 
-    const addActive = (section) => {
-      if (elementViewport < 200 && elementViewport >= -150) {
+    const addActiveClass = (section) => {
+      if (viewportElement < 200 && viewportElement >= -150) {
         section.classList.add("section_style_active");
       }
     };
-    return addActive(section);
+    return addActiveClass(section);
   });
 };
 
-window.addEventListener("scroll", sectionActive);
+window.addEventListener("scroll", sectionActiveClass);
 
 
 // Scroll to top button
-const topFunction = () => {
+const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-buttonScroll.addEventListener("click", topFunction);
+buttonScroll.addEventListener("click", scrollToTop);
