@@ -49,6 +49,7 @@ html {
 .main-header {
   padding: 100px 0;
   text-align: center;
+  /* image taken from: https://unsplash.com/photos/cvBBO4PzWPg */
   background-image: url("../assets/background.jpg");
   background-size: contain;
   color: white;
