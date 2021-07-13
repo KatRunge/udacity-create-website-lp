@@ -11,11 +11,12 @@ const sections = document.querySelectorAll("section");
 const buttonScroll = document.getElementById("button_scroll");
 
 
-// build the nav
+// build the navigation
 const buildMenu = () => {
   for (section of sections) {
     const navItem = document.createElement("li");
     section.classList = "section_style";
+    // add anchor links to navigation based on the section id
     navItem.innerHTML = `<a href="#${section.id}" class="navi_link">${section.id.toUpperCase()}</a>`;
     navList.appendChild(navItem);
   }
