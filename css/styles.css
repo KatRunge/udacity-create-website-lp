@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navi {
   background-color: #619e9e;
   position: fixed;
