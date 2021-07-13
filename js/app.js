@@ -39,44 +39,36 @@ const buildMenu = () => {
   for (section of sections) {
     const navItem = document.createElement("li");
     section.classList = "section_style";
-    navItem.innerHTML = `<a href="#${section.id}" class="navi_link">${section.id.toUpperCase()}</a>`;
+    navItem.innerHTML = `<a href="#${
+      section.id
+    }" class="navi_link">${section.id.toUpperCase()}</a>`;
     navList.appendChild(navItem);
+    console.log(navItem);
   }
 };
 
 buildMenu();
 
-
 // Add class 'active' to section when near top of viewport
 
-const removeActive = (section) => {
-  section.classList.remove("section_style_active");
-};
-
-const addActive = (conditional, section) => {
-  if (conditional) {
-    section.classList.add("section_style_active");
-  }
-};
 
 const sectionActive = () => {
   sections.forEach((section) => {
     const elementViewport = section.getBoundingClientRect().top;
-    const viewPortSection = () =>
-      elementViewport < 200 && elementViewport >= -150;
+    section.classList.remove("section_style_active");
 
-    removeActive(section);
-    addActive(viewPortSection(), section);
+    const addActive = (section) => {
+      if (elementViewport < 200 && elementViewport >= -150) {
+        section.classList.add("section_style_active");
+      }
+    };
+    return addActive(section);
   });
 };
+
 window.addEventListener("scroll", sectionActive);
 
-
 // Scroll to anchor ID using scrollTO event
-
-
-
-
 
 // Scroll to top button
 const topFunction = () => {

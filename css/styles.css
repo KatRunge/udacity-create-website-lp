@@ -57,7 +57,7 @@ body {
 .section_style {
   display: flex;
   align-items: center;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: rgb(28, 28, 28);
   color: white;
 }
