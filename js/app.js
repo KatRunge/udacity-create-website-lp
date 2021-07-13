@@ -63,7 +63,7 @@ const sectionActive = () => {
   sections.forEach((section) => {
     const elementViewport = section.getBoundingClientRect().top;
     const viewPortSection = () =>
-      elementViewport < 250 && elementViewport >= -200;
+      elementViewport < 200 && elementViewport >= -150;
 
     removeActive(section);
     addActive(viewPortSection(), section);
@@ -73,6 +73,9 @@ window.addEventListener("scroll", sectionActive);
 
 
 // Scroll to anchor ID using scrollTO event
+
+
+
 
 
 // Scroll to top button
