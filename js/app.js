@@ -39,9 +39,7 @@ const buildMenu = () => {
   for (section of sections) {
     const navItem = document.createElement("li");
     section.classList = "section_style";
-    navItem.innerHTML = `<a href="#${
-      section.id
-    }" class="navi_link">${section.id.toUpperCase()}</a>`;
+    navItem.innerHTML = `<a href="#${section.id}" class="navi_link">${section.id.toUpperCase()}</a>`;
     navList.appendChild(navItem);
     console.log(navItem);
   }
@@ -50,7 +48,6 @@ const buildMenu = () => {
 buildMenu();
 
 // Add class 'active' to section when near top of viewport
-
 
 const sectionActive = () => {
   sections.forEach((section) => {
