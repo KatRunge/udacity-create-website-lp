@@ -37,15 +37,15 @@ const buttonScroll = document.getElementById("button_scroll");
 // build the nav
 const buildMenu = () => {
   for (section of sections) {
-    const menuNames = section.id;
     const navItem = document.createElement("li");
     section.classList = "section_style";
-    navItem.innerHTML = `<a href="#${menuNames}" class="navi_link">${menuNames.toUpperCase()}</a>`;
+    navItem.innerHTML = `<a href="#${section.id}" class="navi_link">${section.id.toUpperCase()}</a>`;
     navList.appendChild(navItem);
   }
 };
 
 buildMenu();
+
 
 // Add class 'active' to section when near top of viewport
 
@@ -61,7 +61,7 @@ const addActive = (conditional, section) => {
 
 const sectionActive = () => {
   sections.forEach((section) => {
-    const elementViewport = Math.floor(section.getBoundingClientRect().top);
+    const elementViewport = section.getBoundingClientRect().top;
     const viewPortSection = () =>
       elementViewport < 250 && elementViewport >= -200;
 
@@ -70,22 +70,14 @@ const sectionActive = () => {
   });
 };
 window.addEventListener("scroll", sectionActive);
+
+
 // Scroll to anchor ID using scrollTO event
 
+
+// Scroll to top button
 const topFunction = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 buttonScroll.addEventListener("click", topFunction);
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
