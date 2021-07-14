@@ -36,13 +36,17 @@ html {
   padding: 0 10px;
 }
 
-.navi_link {
+.nav_link {
   text-decoration: none;
   color: white;
   behavior: smooth;
 }
 
-.navi_link:hover {
+.nav_item_active {
+  color: blue;
+}
+
+.nav_link:hover {
   color: black;
 }
 
