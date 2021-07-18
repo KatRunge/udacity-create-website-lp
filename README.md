@@ -29,3 +29,4 @@ Some of the functions made here were not learnt in the project but searched in i
 - https://www.youtube.com/watch?v=hPT1SSHptWA&ab_channel=CodingJourney
 - https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
 - https://css-tricks.com/snippets/jquery/smooth-scrolling/
+- https://www.freecodecamp.org/news/javascript-foreach-how-to-loop-through-an-array-in-js/
